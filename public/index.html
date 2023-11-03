@@ -6,7 +6,801 @@
     <link rel="stylesheet" href="./build/style.css" />
     <title>Digitize App</title>
   </head>
-  <body>
-    <h1 class="font-light">به تیلویند خوش آمدید.</h1>
+  <body class="bg-stone-100">
+    <div class="container">
+      <!-- App Bar -->
+      <section
+        class="md:hidden w-full flex items-center justify-between mt-8 mb-6"
+      >
+        <div class="logo w-[50px] h-[42px] p-1">
+          <img src="/assets/images/Logo.png" alt="" srcset="" />
+        </div>
+        <div class="text-slate-800 font-bold text-xl">ساعت هوشمند</div>
+        <div class="search rounded-lg bg-stone-50 p-1 shadow-lg">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-5 h-5 stroke-slate-800"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
+            />
+          </svg>
+        </div>
+      </section>
+
+      <!-- Filter and Sort Bar -->
+      <section class="md:hidden flex gap-x-2 mb-8">
+        <div
+          class="bg-stone-50 flex items-center justify-start w-1/2 rounded-md"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6 text-orange-600 mr-1"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25"
+            />
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-4 h-6 text-orange-600"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3"
+            />
+          </svg>
+          <span class="text-sm mr-4 text-slate-600">محبوب ترین</span>
+        </div>
+        <div
+          class="bg-stone-50 flex items-center justify-start w-1/2 h-12 rounded-md"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-6 h-6 text-stone-300 mr-1"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 3c2.755 0 5.455.232 8.083.678.533.09.917.556.917 1.096v1.044a2.25 2.25 0 01-.659 1.591l-5.432 5.432a2.25 2.25 0 00-.659 1.591v2.927a2.25 2.25 0 01-1.244 2.013L9.75 21v-6.568a2.25 2.25 0 00-.659-1.591L3.659 7.409A2.25 2.25 0 013 5.818V4.774c0-.54.384-1.006.917-1.096A48.32 48.32 0 0112 3z"
+            />
+          </svg>
+          <span class="text-sm mr-4 text-slate-600">فیلتر : برند اپل</span>
+        </div>
+      </section>
+
+      <!-- Main Section -->
+
+      <div
+        class="grid grid-cols-12 grid-rows-[60px_minmax(900px,_1fr)] gap-4 p-2 m-2"
+      >
+        <!-- SideBar -->
+        <div class="hidden md:flex  md:col-span-4 lg:col-span-3 row-span-2  flex-col">
+          <div
+            class="category w-full rounded-md flex flex-col justify-start items-start bg-white mb-4 p-4"
+          >
+            <!-- Category -->
+            <div class="flex flex-col">
+              <span class="mb-4 font-bold text-sm text-orange-400"
+                >دسته بندی</span
+              >
+              <div
+                class="flex items-center justify-start text-gray-300 focus:text-slate-800 text-sm font-normal mb-4"
+              >
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="w-5 h-5"
+                  >
+                    <path
+                      d="M10.5 18.75a.75.75 0 000 1.5h3a.75.75 0 000-1.5h-3z"
+                    />
+                    <path
+                      fill-rule="evenodd"
+                      d="M8.625.75A3.375 3.375 0 005.25 4.125v15.75a3.375 3.375 0 003.375 3.375h6.75a3.375 3.375 0 003.375-3.375V4.125A3.375 3.375 0 0015.375.75h-6.75zM7.5 4.125C7.5 3.504 8.004 3 8.625 3H9.75v.375c0 .621.504 1.125 1.125 1.125h2.25c.621 0 1.125-.504 1.125-1.125V3h1.125c.621 0 1.125.504 1.125 1.125v15.75c0 .621-.504 1.125-1.125 1.125h-6.75A1.125 1.125 0 017.5 19.875V4.125z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+                <span class="mr-2 font-semibold"> تلفن همراه </span>
+              </div>
+
+              <div
+                class="flex items-center justify-start text-gray-300 focus:text-slate-800 text-sm font-normal mb-4"
+              >
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="w-5 h-5"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M2.25 5.25a3 3 0 013-3h13.5a3 3 0 013 3V15a3 3 0 01-3 3h-3v.257c0 .597.237 1.17.659 1.591l.621.622a.75.75 0 01-.53 1.28h-9a.75.75 0 01-.53-1.28l.621-.622a2.25 2.25 0 00.659-1.59V18h-3a3 3 0 01-3-3V5.25zm1.5 0v7.5a1.5 1.5 0 001.5 1.5h13.5a1.5 1.5 0 001.5-1.5v-7.5a1.5 1.5 0 00-1.5-1.5H5.25a1.5 1.5 0 00-1.5 1.5z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+                <span class="mr-2 font-semibold"> لب تاپ </span>
+              </div>
+
+              <div
+                class="flex items-center justify-start text-gray-300 focus:text-slate-800 text-sm font-normal mb-4"
+              >
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    class="w-5 h-5"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zM12.75 6a.75.75 0 00-1.5 0v6c0 .414.336.75.75.75h4.5a.75.75 0 000-1.5h-3.75V6z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+                <span class="mr-2 font-semibold"> ساعت هوشمند </span>
+              </div>
+            </div>
+            <!-- Filter -->
+            <div class="flex flex-col mt-4 w-full">
+              <span class="mb-4 font-bold text-sm text-orange-400">فیلتر</span>
+              <div
+                class="w-full flex flex-col items-center justify-between text-slate-800 text-sm font-normal mb-4"
+              >
+                <!-- Brand Filter -->
+                <div class="brand__filter w-full mb-4">
+                  <div class="w-full flex items-center justify-between">
+                    <div class="flex">
+                      <span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          class="w-5 h-5"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M12 1.5a.75.75 0 01.75.75V4.5a.75.75 0 01-1.5 0V2.25A.75.75 0 0112 1.5zM5.636 4.136a.75.75 0 011.06 0l1.592 1.591a.75.75 0 01-1.061 1.06l-1.591-1.59a.75.75 0 010-1.061zm12.728 0a.75.75 0 010 1.06l-1.591 1.592a.75.75 0 01-1.06-1.061l1.59-1.591a.75.75 0 011.061 0zm-6.816 4.496a.75.75 0 01.82.311l5.228 7.917a.75.75 0 01-.777 1.148l-2.097-.43 1.045 3.9a.75.75 0 01-1.45.388l-1.044-3.899-1.601 1.42a.75.75 0 01-1.247-.606l.569-9.47a.75.75 0 01.554-.68zM3 10.5a.75.75 0 01.75-.75H6a.75.75 0 010 1.5H3.75A.75.75 0 013 10.5zm14.25 0a.75.75 0 01.75-.75h2.25a.75.75 0 010 1.5H18a.75.75 0 01-.75-.75zm-8.962 3.712a.75.75 0 010 1.061l-1.591 1.591a.75.75 0 11-1.061-1.06l1.591-1.592a.75.75 0 011.06 0z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                      </span>
+                      <span class="mr-2 font-semibold"> برند محصول </span>
+                    </div>
+                    <div>
+                      <span>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          class="w-5 h-5"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                          />
+                        </svg>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="mt-2">
+                    <ul
+                      class="w-full text-sm font-medium text-gray-900 bg-white"
+                    >
+                      <li class="w-full rounded-t-lg">
+                        <div class="flex items-center pl-3">
+                          <input
+                            id="vue-checkbox"
+                            type="checkbox"
+                            value=""
+                            class="w-4 h-4 ring-orange-500 bg-purple-800"
+                          />
+                          <label
+                            for="vue-checkbox"
+                            class="w-full py-3 mr-2 text-sm font-medium text-gray-900"
+                            >اپل
+                          </label>
+                        </div>
+                      </li>
+                      <li class="w-full rounded-t-lg">
+                        <div class="flex items-center pl-3">
+                          <input
+                            id="vue-checkbox"
+                            type="checkbox"
+                            value=""
+                            class="w-4 h-4 ring-orange-500"
+                          />
+                          <label
+                            for="vue-checkbox"
+                            class="w-full py-3 mr-2 text-sm font-medium text-gray-900"
+                            >سامسونگ
+                          </label>
+                        </div>
+                      </li>
+                      <li class="w-full rounded-t-lg">
+                        <div class="flex items-center pl-3">
+                          <input
+                            id="vue-checkbox"
+                            type="checkbox"
+                            value=""
+                            class="w-4 h-4 ring-orange-500"
+                          />
+                          <label
+                            for="vue-checkbox"
+                            class="w-full py-3 mr-2 text-sm font-medium text-gray-900"
+                            >هوآوی</label
+                          >
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Color Filter -->
+                <div class="color__filter w-full">
+                  <div class="brand__filter w-full">
+                    <div class="w-full flex items-center justify-between">
+                      <div class="flex">
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="w-5 h-5"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z"
+                            />
+                          </svg>
+                        </span>
+                        <span class="mr-2 font-semibold"> قیمت محصول</span>
+                      </div>
+                      <div>
+                        <span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            class="w-5 h-5"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                            />
+                          </svg>
+                        </span>
+                      </div>
+                    </div>
+                    <div class="mt-2">
+                      <ul
+                        class="w-full text-sm font-medium text-gray-900 bg-white"
+                      >
+                        <li class="w-full rounded-t-lg">
+                          <div class="flex items-center pl-3">
+                            <input
+                              id="vue-checkbox"
+                              type="checkbox"
+                              value=""
+                              class="w-4 h-4 ring-orange-500 bg-purple-800"
+                            />
+                            <label
+                              for="vue-checkbox"
+                              class="w-full py-3 mr-2 text-sm font-medium text-gray-900"
+                              >کمتر از یک میلیون تومان
+                            </label>
+                          </div>
+                        </li>
+                        <li class="w-full rounded-t-lg">
+                          <div class="flex items-center pl-3">
+                            <input
+                              id="vue-checkbox"
+                              type="checkbox"
+                              value=""
+                              class="w-4 h-4 ring-orange-500"
+                            />
+                            <label
+                              for="vue-checkbox"
+                              class="w-full py-3 mr-2 text-sm font-medium text-gray-900"
+                              >کمتر از ده میلیون نومان
+                            </label>
+                          </div>
+                        </li>
+                        <li class="w-full rounded-t-lg">
+                          <div class="flex items-center pl-3">
+                            <input
+                              id="vue-checkbox"
+                              type="checkbox"
+                              value=""
+                              class="w-4 h-4 ring-orange-500"
+                            />
+                            <label
+                              for="vue-checkbox"
+                              class="w-full py-3 mr-2 text-sm font-medium text-gray-900"
+                              >کمتر از صد میلیون تومان</label
+                            >
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="banner flex items-center justify-center w-full h-48 bg-purple-900 rounded-md"
+          >
+            <span class="text-white flex items-center">جایی برای تبلیغات</span>
+          </div>
+        </div>
+      <!-- Filter Bar -->
+        <div
+          class="hidden md:flex md:col-span-8 lg:col-span-9 w-full h-full bg-white rounded-md"
+        >
+          Filter
+        </div>
+
+       
+        <!-- Products -->
+        <div class="col-span-12 md:col-span-8 lg:col-span-9">
+          <section
+            class="w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+          >
+            <div class="bg-slate-50 rounded-md p-2">
+              <div class="product__image h-[144px] mb-4">
+                <div
+                  class="bg-slate-200 h-full w-full rounded-md flex items-center justify-center relative"
+                >
+                  <img
+                    class="w-[66px] h-[112px]"
+                    src="/assets/images/Cart/1.png"
+                    alt=""
+                    srcset=""
+                  />
+
+                  <span
+                    class="w-7 h-7 rounded-full absolute bg-gray-300 inset-2 flex items-center justify-center"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                      strokeWidth="{1.5}"
+                      stroke="currentColor"
+                      class="w-4 h-4 text-orange-400"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div class="product__content mx-2">
+                <div class="flex items-center justify-between mb-4">
+                  <span class="text-stone-200 font-light text-sm">اپل</span>
+                  <div class="flex items-center">
+                    <span
+                      class="rounded-full bg-orange-500 w-4 h-4 block ring-1 ring-white z-30"
+                    ></span>
+                    <span
+                      class="rounded-full bg-purple-500 w-4 h-4 block ring-1 ring-white z-20 -mr-1"
+                    ></span>
+                    <span
+                      class="rounded-full bg-yellow-500 w-4 h-4 block ring-1 ring-white z-10 -mr-1"
+                    ></span>
+                    <span
+                      class="rounded-full bg-black w-4 h-4 block ring-2 ring-white z-0 -mr-1"
+                    ></span>
+                  </div>
+                </div>
+                <p class="text-[0.8rem] font-normal text-slate-800 mb-4">
+                  ساعت هوشمند اپل سری 6
+                </p>
+                <p
+                  class="text-[0.8rem] font-normal text-slate-800 text-left text-orange-700 mb-6"
+                >
+                  ۱۲۳,۴۵۶,۷۸۰ تومان
+                </p>
+
+                <hr class="bg-slate-700" />
+
+                <p
+                  class="w-full flex items-center justify-center text-orange-400 py-2 font-medium text-md"
+                >
+                  مشاهده و سفارش
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-slate-50 rounded-md p-2">
+              <div class="product__image h-[144px] mb-4">
+                <div
+                  class="bg-slate-200 h-full w-full rounded-md flex items-center justify-center relative"
+                >
+                  <img
+                    class="w-[66px] h-[112px]"
+                    src="/assets/images/Cart/2.png"
+                    alt=""
+                    srcset=""
+                  />
+
+                  <span
+                    class="w-7 h-7 rounded-full absolute bg-gray-300 inset-2 flex items-center justify-center"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                      strokeWidth="{1.5}"
+                      stroke="currentColor"
+                      class="w-4 h-4 text-orange-400"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div class="product__content mx-2">
+                <div class="flex items-center justify-between mb-4">
+                  <span class="text-stone-200 font-light text-sm">اپل</span>
+                  <div class="flex items-center">
+                    <span
+                      class="rounded-full bg-orange-500 w-4 h-4 block ring-1 ring-white z-30"
+                    ></span>
+                    <span
+                      class="rounded-full bg-purple-500 w-4 h-4 block ring-1 ring-white z-20 -mr-1"
+                    ></span>
+                    <span
+                      class="rounded-full bg-yellow-500 w-4 h-4 block ring-1 ring-white z-10 -mr-1"
+                    ></span>
+                    <span
+                      class="rounded-full bg-black w-4 h-4 block ring-2 ring-white z-0 -mr-1"
+                    ></span>
+                  </div>
+                </div>
+                <p class="text-[0.8rem] font-normal text-slate-800 mb-4">
+                  ساعت هوشمند اپل سری 6
+                </p>
+                <p
+                  class="text-[0.8rem] font-normal text-slate-800 text-left text-orange-700 mb-6"
+                >
+                  ۱۲۳,۴۵۶,۷۸ تومان
+                </p>
+
+                <hr class="bg-slate-700" />
+
+                <p
+                  class="w-full flex items-center justify-center text-orange-400 py-2 font-medium text-md"
+                >
+                  مشاهده و سفارش
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-slate-50 rounded-md p-2">
+              <div class="product__image h-[144px] mb-4">
+                <div
+                  class="bg-slate-200 h-full w-full rounded-md flex items-center justify-center relative"
+                >
+                  <img
+                    class="w-[66px] h-[112px]"
+                    src="/assets/images/Cart/1.png"
+                    alt=""
+                    srcset=""
+                  />
+
+                  <span
+                    class="w-7 h-7 rounded-full absolute bg-gray-300 inset-2 flex items-center justify-center"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                      strokeWidth="{1.5}"
+                      stroke="currentColor"
+                      class="w-4 h-4 text-orange-400"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div class="product__content mx-2">
+                <div class="flex items-center justify-between mb-4">
+                  <span class="text-stone-200 font-light text-sm">اپل</span>
+                  <div class="flex items-center">
+                    <span
+                      class="rounded-full bg-orange-500 w-4 h-4 block ring-1 ring-white z-30"
+                    ></span>
+                    <span
+                      class="rounded-full bg-purple-500 w-4 h-4 block ring-1 ring-white z-20 -mr-1"
+                    ></span>
+                    <span
+                      class="rounded-full bg-yellow-500 w-4 h-4 block ring-1 ring-white z-10 -mr-1"
+                    ></span>
+                    <span
+                      class="rounded-full bg-black w-4 h-4 block ring-2 ring-white z-0 -mr-1"
+                    ></span>
+                  </div>
+                </div>
+                <p class="text-[0.8rem] font-normal text-slate-800 mb-4">
+                  ساعت هوشمند اپل سری 6
+                </p>
+                <p
+                  class="text-[0.8rem] font-normal text-slate-800 text-left text-orange-700 mb-6"
+                >
+                  ۱۲۳,۴۵۶,۷۸ تومان
+                </p>
+
+                <hr class="bg-slate-700" />
+
+                <p
+                  class="w-full flex items-center justify-center text-orange-400 py-2 font-medium text-md"
+                >
+                  مشاهده و سفارش
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-slate-50 rounded-md p-2">
+              <div class="product__image h-[144px] mb-4">
+                <div
+                  class="bg-slate-200 h-full w-full rounded-md flex items-center justify-center relative"
+                >
+                  <img
+                    class="w-[66px] h-[112px]"
+                    src="/assets/images/Cart/2.png"
+                    alt=""
+                    srcset=""
+                  />
+
+                  <span
+                    class="w-7 h-7 rounded-full absolute bg-gray-300 inset-2 flex items-center justify-center"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                      strokeWidth="{1.5}"
+                      stroke="currentColor"
+                      class="w-4 h-4 text-orange-400"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div class="product__content mx-2">
+                <div class="flex items-center justify-between mb-4">
+                  <span class="text-stone-200 font-light text-sm">اپل</span>
+                  <div class="flex items-center">
+                    <span
+                      class="rounded-full bg-orange-500 w-4 h-4 block ring-1 ring-white z-30"
+                    ></span>
+                    <span
+                      class="rounded-full bg-purple-500 w-4 h-4 block ring-1 ring-white z-20 -mr-1"
+                    ></span>
+                    <span
+                      class="rounded-full bg-yellow-500 w-4 h-4 block ring-1 ring-white z-10 -mr-1"
+                    ></span>
+                    <span
+                      class="rounded-full bg-black w-4 h-4 block ring-2 ring-white z-0 -mr-1"
+                    ></span>
+                  </div>
+                </div>
+                <p class="text-[0.8rem] font-normal text-slate-800 mb-4">
+                  ساعت هوشمند اپل سری 6
+                </p>
+                <p
+                  class="text-[0.8rem] font-normal text-slate-800 text-left text-orange-700 mb-6"
+                >
+                  ۱۲۳,۴۵۶,۷۸ تومان
+                </p>
+
+                <hr class="bg-slate-700" />
+
+                <p
+                  class="w-full flex items-center justify-center text-orange-400 py-2 font-medium text-md"
+                >
+                  مشاهده و سفارش
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-slate-50 rounded-md p-2">
+              <div class="product__image h-[144px] mb-4">
+                <div
+                  class="bg-slate-200 h-full w-full rounded-md flex items-center justify-center relative"
+                >
+                  <img
+                    class="w-[66px] h-[112px]"
+                    src="/assets/images/Cart/1.png"
+                    alt=""
+                    srcset=""
+                  />
+
+                  <span
+                    class="w-7 h-7 rounded-full absolute bg-gray-300 inset-2 flex items-center justify-center"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                      strokeWidth="{1.5}"
+                      stroke="currentColor"
+                      class="w-4 h-4 text-orange-400"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div class="product__content mx-2">
+                <div class="flex items-center justify-between mb-4">
+                  <span class="text-stone-200 font-light text-sm">اپل</span>
+                  <div class="flex items-center">
+                    <span
+                      class="rounded-full bg-orange-500 w-4 h-4 block ring-1 ring-white z-30"
+                    ></span>
+                    <span
+                      class="rounded-full bg-purple-500 w-4 h-4 block ring-1 ring-white z-20 -mr-1"
+                    ></span>
+                    <span
+                      class="rounded-full bg-yellow-500 w-4 h-4 block ring-1 ring-white z-10 -mr-1"
+                    ></span>
+                    <span
+                      class="rounded-full bg-black w-4 h-4 block ring-2 ring-white z-0 -mr-1"
+                    ></span>
+                  </div>
+                </div>
+                <p class="text-[0.8rem] font-normal text-slate-800 mb-4">
+                  ساعت هوشمند اپل سری 6
+                </p>
+                <p
+                  class="text-[0.8rem] font-normal text-slate-800 text-left text-orange-700 mb-6"
+                >
+                  ۱۲۳,۴۵۶,۷۸ تومان
+                </p>
+
+                <hr class="bg-slate-700" />
+
+                <p
+                  class="w-full flex items-center justify-center text-orange-400 py-2 font-medium text-md"
+                >
+                  مشاهده و سفارش
+                </p>
+              </div>
+            </div>
+
+            <div class="bg-slate-50 rounded-md p-2">
+              <div class="product__image h-[144px] mb-4">
+                <div
+                  class="bg-slate-200 h-full w-full rounded-md flex items-center justify-center relative"
+                >
+                  <img
+                    class="w-[66px] h-[112px]"
+                    src="/assets/images/Cart/2.png"
+                    alt=""
+                    srcset=""
+                  />
+
+                  <span
+                    class="w-7 h-7 rounded-full absolute bg-gray-300 inset-2 flex items-center justify-center"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                      strokeWidth="{1.5}"
+                      stroke="currentColor"
+                      class="w-4 h-4 text-orange-400"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
+                      />
+                    </svg>
+                  </span>
+                </div>
+              </div>
+              <div class="product__content mx-2">
+                <div class="flex items-center justify-between mb-4">
+                  <span class="text-stone-200 font-light text-sm">اپل</span>
+                  <div class="flex items-center">
+                    <span
+                      class="rounded-full bg-orange-500 w-4 h-4 block ring-1 ring-white z-30"
+                    ></span>
+                    <span
+                      class="rounded-full bg-purple-500 w-4 h-4 block ring-1 ring-white z-20 -mr-1"
+                    ></span>
+                    <span
+                      class="rounded-full bg-yellow-500 w-4 h-4 block ring-1 ring-white z-10 -mr-1"
+                    ></span>
+                    <span
+                      class="rounded-full bg-black w-4 h-4 block ring-2 ring-white z-0 -mr-1"
+                    ></span>
+                  </div>
+                </div>
+                <p class="text-[0.8rem] font-normal text-slate-800 mb-4">
+                  ساعت هوشمند اپل سری 6
+                </p>
+                <p
+                  class="text-[0.8rem] font-normal text-slate-800 text-left text-orange-700 mb-6"
+                >
+                  ۱۲۳,۴۵۶,۷۸ تومان
+                </p>
+
+                <hr class="bg-slate-700" />
+
+                <p
+                  class="w-full flex items-center justify-center text-orange-400 py-2 font-medium text-md"
+                >
+                  مشاهده و سفارش
+                </p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      
+    </div>
   </body>
 </html>
