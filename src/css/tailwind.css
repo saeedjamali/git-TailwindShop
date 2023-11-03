@@ -1,0 +1,8 @@
+@import url("fonts.css");
+
+@tailwind base;
+/* reset Css */
+@tailwind components;
+/* create component and combine classes */
+@tailwind utilities;
+/* Classes used */
