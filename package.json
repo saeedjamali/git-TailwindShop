@@ -2,7 +2,13 @@
   "devDependencies": {
     "tailwindcss": "^3.3.5"
   },
-  "scripts":{
-    "tailwind":"npx tailwindcss -i src/css/tailwind.css -o public/build/style.css --watch"
-  }
+  "scripts": {
+    "tailwind": "npx tailwindcss -i src/css/tailwind.css -o public/build/style.css --watch"
+  },
+  "name": "tailwindshop",
+  "description": "in this project i use this website :\r 1- Figma\r 2- Zepline\r 3-remove Bg\r 4-Heroicons",
+  "version": "1.0.0",
+  "main": "tailwind.config.js",
+  "author": "",
+  "license": "ISC"
 }
