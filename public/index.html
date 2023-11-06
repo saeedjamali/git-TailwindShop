@@ -101,6 +101,7 @@
             class="category w-full rounded-md flex flex-col justify-start items-start bg-white mb-4 p-4"
           >
             <!-- Category -->
+            <!-- Best way :  Ul/Li -->
             <div class="flex flex-col">
               <span class="mb-4 font-medium text-sm text-orange-400"
                 >دسته بندی</span
@@ -129,7 +130,7 @@
               </div>
 
               <div
-                class="flex items-center justify-start text-gray-300 focus:text-slate-800 text-sm font-normal mb-4"
+                class="cursor-pointer flex items-center justify-start text-gray-300 focus:text-slate-800 text-sm font-normal mb-4"
               >
                 <span>
                   <svg
@@ -172,10 +173,10 @@
             <div class="flex flex-col mt-4 w-full">
               <span class="mb-4 font-bold text-sm text-orange-400">فیلتر</span>
               <div
-                class="w-full flex flex-col items-center justify-between text-slate-800 text-sm font-normal mb-4"
+                class="sidebar__filter w-full flex flex-col items-center justify-between text-slate-800 text-sm font-normal mb-4"
               >
                 <!-- Brand Filter -->
-                <div class="brand__filter w-full mb-4">
+                <!-- <div class="brand__filter w-full mb-4">
                   <div class="w-full flex items-center justify-between">
                     <div class="flex">
                       <span>
@@ -232,42 +233,14 @@
                           </label>
                         </div>
                       </li>
-                      <li class="w-full rounded-t-lg">
-                        <div class="flex items-center pl-3">
-                          <input
-                            id="vue-checkbox"
-                            type="checkbox"
-                            value=""
-                            class="w-4 h-4 ring-orange-500"
-                          />
-                          <label
-                            for="vue-checkbox"
-                            class="w-full py-3 mr-2 text-sm font-medium text-gray-900"
-                            >سامسونگ
-                          </label>
-                        </div>
-                      </li>
-                      <li class="w-full rounded-t-lg">
-                        <div class="flex items-center pl-3">
-                          <input
-                            id="vue-checkbox"
-                            type="checkbox"
-                            value=""
-                            class="w-4 h-4 ring-orange-500"
-                          />
-                          <label
-                            for="vue-checkbox"
-                            class="w-full py-3 mr-2 text-sm font-medium text-gray-900"
-                            >هوآوی</label
-                          >
-                        </div>
-                      </li>
+                            
+                      
                     </ul>
                   </div>
-                </div>
+                </div> -->
 
-                <!-- Color Filter -->
-                <div class="color__filter w-full">
+                <!-- Price Filter -->
+                <!-- <div class="price__filter w-full">
                   <div class="brand__filter w-full">
                     <div class="w-full flex items-center justify-between">
                       <div class="flex">
@@ -360,7 +333,7 @@
                       </ul>
                     </div>
                   </div>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -406,11 +379,11 @@
           </span>
           <span></span>
           <div class="w-full h-full">
-            <ul class="w-full h-full flex items-center text-[10px] font-[400] lg:text-sm lg:font-medium gap-x-4 lg:gap-x-6 mr-4 text-gray-300">
-              <li class="text-slate-800 relative"><span>محبوب ترین<span class="absolute w-1 h-1 bg-orange-600 inset rounded-full"></span></span> </li>
-              <li >پربازدیدترین </li>
-              <li>گران ترین </li>
-              <li>ارزان ترین </li>
+            <ul  class="w-full h-full  flex items-center text-[10px] font-[400] lg:text-sm lg:font-medium gap-x-4 lg:gap-x-6 mr-4 text-gray-300">
+              <li class="cursor-pointer text-slate-800 relative"><span>محبوب ترین<span class="absolute w-1 h-1 bg-orange-600 inset rounded-full"></span></span> </li>
+              <li class="cursor-pointer" >پربازدیدترین </li>
+              <li class="cursor-pointer">گران ترین </li>
+              <li class="cursor-pointer">ارزان ترین </li>
             </ul>
           </div>
         </div>
