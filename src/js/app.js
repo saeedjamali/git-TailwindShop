@@ -113,6 +113,8 @@ class="w-5 h-5"
 </svg>
 `;
 
+console.log("Modify Js in SlideMenu");
+
 createCheckedGroup("برند محصول", svgBrand, arrBrand, 1);
 createCheckedGroup("قیمت محصول", svgPrice, arrPrice, 2);
 createCheckedGroup("برند محصول", svgBrand, arrBrand, 3);
