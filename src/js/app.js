@@ -143,27 +143,27 @@ function createCheckedGroup(title, icon, arr, id) {
   let checkBoxGroup = ` <div class=" cursor-pointer w-full mt-4 bg-slate-200 p-2 rounded-md">
 <div data-id=${id}  class="title__filter w-full flex items-center justify-between">
   <div class="flex">
-    <span>
+    <span >
      ${icon}
     </span>
     <span class="mr-2 font-medium"> ${title}</span>
   </div>
-  <div>
-    <span>
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        class="w-5 h-5"
-      >
-        <path
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-        />
-      </svg>
+  <div class="title__icon" >
+    <span >
+    <svg
+    xmlns="http://www.w3.org/2000/svg"
+    fill="none"
+    viewBox="0 0 24 24"
+    stroke-width="1.5"
+    stroke="currentColor"
+    class="w-5 h-5 text-purple-950  transition-all ease-in-out delay-200"
+  >
+    <path
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+    />
+  </svg>
     </span>
   </div>
 </div>
@@ -184,21 +184,24 @@ function createCheckedGroup(title, icon, arr, id) {
 function disClosureSideBar() {
   const titles = document.querySelectorAll(".title__filter");
   const content = document.querySelectorAll(".content__filter");
+  const iconTitle = document.querySelectorAll(".title__icon");
   // console.log(titles);
 
   titles.forEach((title) => {
     title.addEventListener("click", (e) => {
-      // console.log(title.childNodes[3].childNodes[1].classList);
-      title.childNodes[3].childNodes[1].classList.toggle("rotate-180");
+       console.log(title.childNodes[3]);
+      title.childNodes[3].childNodes[1].chil.classList.toggle("rotate-180");
       let id = title.dataset.id;
+      // iconTitle.classList.toggle("rotate-90");
       content.forEach((c) => {
         if (c.dataset.id == id) {
           c.classList.toggle("hidden");
+         
         } else {
           // title.childNodes[3].childNodes[1].classList.toggle("rotate-180");
           c.parentNode
             .getElementsByTagName("div")[0]
-            .childNodes[3].childNodes[1].classList.remove("rotate-180");
+            // .childNodes[3].childNodes[1].classList.remove("rotate-180");
           c.classList.add("hidden");
         }
         c.addEventListener("click", () => console.log("Next time..."));
