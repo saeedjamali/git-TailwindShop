@@ -1,516 +1,446 @@
 <!DOCTYPE html>
 <html lang="en" dir="rtl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cart</title>
-    <link rel="stylesheet" href="./build/style.css" />
-  </head>
-  <body class="bg-slate-100">
-   <div class="mobile lg:hidden">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cart</title>
+  <link rel="stylesheet" href="./build/style.css" />
+</head>
+
+<body class="bg-slate-100">
+  <div class="mobile lg:hidden">
     <div class="container  py-4">
-        <section class="w-full flex items-center justify-between mt-8 mb-6">
-          <div
-            class="backward rounded-lg bg-stone-50 p-1 shadow-lg cursor-pointer"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-5 h-5"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M8.25 4.5l7.5 7.5-7.5 7.5"
-              />
-            </svg>
-          </div>
-          <div class="text-slate-800 font-bold text-xl">
-            سبد خرید
-          </div>
-          <div class="search rounded-lg bg-stone-50 p-1 shadow-lg cursor-pointer">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-5 h-5 stroke-slate-800"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
-              />
-            </svg>
-          
-        </section>
-      
-        <section class="cart space-y-2">
-         
-          <div class="bg-white w-full h-32 p-4 flex items-center rounded-md gap-x-8">
-            <div class="w-16 h-24">
-                <img src="/assets/images/Cart/1.png" alt="" class="w-full h-full">
-            </div>
-            <div class="h-full flex flex-col flex-1 items-start justify-around font-bold">
-                <span class="text-slate-800">ساعت هوشمند اپل سری ۶</span>
-                <span class="text-orange-500">۶,۶۵۰,۰۰۰ تومان</span>
-            </div>
-
-
-            <div class="h-full flex flex-col items-end justify-between">
-                <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 stroke-orange-500 cursor-pointer">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                  </span>
-                  <div class="flex items-center justify-center gap-x-2">
-                    
-                      <span class="w-4 h-4 rounded-full bg-gray-300 flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 stroke-gray-700 cursor-pointer">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
-                          </svg>
-                          
-                      </span>
-                      <span class="border p-1 border-orange-300 font-medium">2</span>
-                      <span class="w-4 h-4 rounded-full bg-orange-300 flex items-center justify-center cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 stroke-orange-700">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
-                      </svg>
-                      </span>
-                  </div>
-
-            </div>
-          </div>
-          <div class="bg-white w-full h-32 p-4 flex items-center rounded-md gap-x-8">
-            <div class="w-16 h-24">
-                <img src="/assets/images/Cart/1.png" alt="" class="w-full h-full">
-            </div>
-            <div class="h-full flex flex-col flex-1 items-start justify-around font-bold">
-                <span class="text-slate-800">ساعت هوشمند اپل سری ۶</span>
-                <span class="text-orange-500">۶,۶۵۰,۰۰۰ تومان</span>
-            </div>
-
-
-            <div class="h-full flex flex-col items-end justify-between">
-                <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 stroke-orange-500 cursor-pointer">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                  </span>
-                  <div class="flex items-center justify-center gap-x-2">
-                    
-                      <span class="w-4 h-4 rounded-full bg-gray-300 flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 stroke-gray-700 cursor-pointer">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
-                          </svg>
-                          
-                      </span>
-                      <span class="border p-1 border-orange-300 font-medium">2</span>
-                      <span class="w-4 h-4 rounded-full bg-orange-300 flex items-center justify-center cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 stroke-orange-700">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
-                      </svg>
-                      </span>
-                  </div>
-
-            </div>
-          </div>
-          <div class="bg-white w-full h-32 p-4 flex items-center rounded-md gap-x-8">
-            <div class="w-16 h-24">
-                <img src="/assets/images/Cart/1.png" alt="" class="w-full h-full">
-            </div>
-            <div class="h-full flex flex-col flex-1 items-start justify-around font-bold">
-                <span class="text-slate-800">ساعت هوشمند اپل سری ۶</span>
-                <span class="text-orange-500">۶,۶۵۰,۰۰۰ تومان</span>
-            </div>
-
-
-            <div class="h-full flex flex-col items-end justify-between">
-                <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 stroke-orange-500 cursor-pointer">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                  </span>
-                  <div class="flex items-center justify-center gap-x-2">
-                    
-                      <span class="w-4 h-4 rounded-full bg-gray-300 flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 stroke-gray-700 cursor-pointer">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
-                          </svg>
-                          
-                      </span>
-                      <span class="border p-1 border-orange-300 font-medium">2</span>
-                      <span class="w-4 h-4 rounded-full bg-orange-300 flex items-center justify-center cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 stroke-orange-700">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
-                      </svg>
-                      </span>
-                  </div>
-
-            </div>
-          </div>
-         
-
-        </section>
-
-        <div class="bg-white w-full h-32 p-4 rounded-md mt-16 mb-8">
-           <div class="font-bold flex items-center justify-around w-full text-slate-800 py-4">
-            <span>مجموع قیمت : </span>
-            <span class="text-orange-500">۶,۶۵۰,۰۰۰ تومان</span>
-           </div>
-           <div class="font-medium text-[12px] my-4 flex items-center justify-center">
-            <span class="text-slate-700">کد تخفیف دارید ؟</span>
-           </div>
-
-
-         
+      <section class="w-full flex items-center justify-between mt-8 mb-6">
+        <div class="backward rounded-lg bg-stone-50 p-1 shadow-lg cursor-pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-5 h-5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+          </svg>
         </div>
-        <button class="w-full bg-orange-400 text-white rounded-md mt-16  py-2 font-medium">ادامه فرایند خرید</button>
-      </div>
+        <div class="text-slate-800 font-bold text-xl">
+          سبد خرید
+        </div>
+        <div class="search rounded-lg bg-stone-50 p-1 shadow-lg cursor-pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-5 h-5 stroke-slate-800">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+          </svg>
 
-      <div
-      class="shadow-md h-14 w-full block lg:hidden bg-white sticky bottom-0 left-0 right-0 z-50 rounded-t-lg"
-    >
+      </section>
+
+      <section class="cart space-y-2">
+
+        <div class="bg-white w-full h-32 p-4 flex items-center rounded-md gap-x-8">
+          <div class="w-16 h-24">
+            <img src="/assets/images/Cart/1.png" alt="" class="w-full h-full">
+          </div>
+          <div class="h-full flex flex-col flex-1 items-start justify-around font-bold">
+            <span class="text-slate-800">ساعت هوشمند اپل سری ۶</span>
+            <span class="text-orange-500">۶,۶۵۰,۰۰۰ تومان</span>
+          </div>
+
+
+          <div class="h-full flex flex-col items-end justify-between">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-4 h-4 stroke-orange-500 cursor-pointer">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </span>
+            <div class="flex items-center justify-center gap-x-2">
+
+              <span class="w-4 h-4 rounded-full bg-gray-300 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-4 h-4 stroke-gray-700 cursor-pointer">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+                </svg>
+
+              </span>
+              <span class="border p-1 border-orange-300 font-medium">2</span>
+              <span class="w-4 h-4 rounded-full bg-orange-300 flex items-center justify-center cursor-pointer"><svg
+                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-4 h-4 stroke-orange-700">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+                </svg>
+              </span>
+            </div>
+
+          </div>
+        </div>
+        <div class="bg-white w-full h-32 p-4 flex items-center rounded-md gap-x-8">
+          <div class="w-16 h-24">
+            <img src="/assets/images/Cart/1.png" alt="" class="w-full h-full">
+          </div>
+          <div class="h-full flex flex-col flex-1 items-start justify-around font-bold">
+            <span class="text-slate-800">ساعت هوشمند اپل سری ۶</span>
+            <span class="text-orange-500">۶,۶۵۰,۰۰۰ تومان</span>
+          </div>
+
+
+          <div class="h-full flex flex-col items-end justify-between">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-4 h-4 stroke-orange-500 cursor-pointer">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </span>
+            <div class="flex items-center justify-center gap-x-2">
+
+              <span class="w-4 h-4 rounded-full bg-gray-300 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-4 h-4 stroke-gray-700 cursor-pointer">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+                </svg>
+
+              </span>
+              <span class="border p-1 border-orange-300 font-medium">2</span>
+              <span class="w-4 h-4 rounded-full bg-orange-300 flex items-center justify-center cursor-pointer"><svg
+                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-4 h-4 stroke-orange-700">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+                </svg>
+              </span>
+            </div>
+
+          </div>
+        </div>
+        <div class="bg-white w-full h-32 p-4 flex items-center rounded-md gap-x-8">
+          <div class="w-16 h-24">
+            <img src="/assets/images/Cart/1.png" alt="" class="w-full h-full">
+          </div>
+          <div class="h-full flex flex-col flex-1 items-start justify-around font-bold">
+            <span class="text-slate-800">ساعت هوشمند اپل سری ۶</span>
+            <span class="text-orange-500">۶,۶۵۰,۰۰۰ تومان</span>
+          </div>
+
+
+          <div class="h-full flex flex-col items-end justify-between">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="w-4 h-4 stroke-orange-500 cursor-pointer">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </span>
+            <div class="flex items-center justify-center gap-x-2">
+
+              <span class="w-4 h-4 rounded-full bg-gray-300 flex items-center justify-center">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-4 h-4 stroke-gray-700 cursor-pointer">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+                </svg>
+
+              </span>
+              <span class="border p-1 border-orange-300 font-medium">2</span>
+              <span class="w-4 h-4 rounded-full bg-orange-300 flex items-center justify-center cursor-pointer"><svg
+                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="w-4 h-4 stroke-orange-700">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+                </svg>
+              </span>
+            </div>
+
+          </div>
+        </div>
+
+
+      </section>
+
+      <div class="bg-white w-full h-32 p-4 rounded-md mt-16 mb-8">
+        <div class="font-bold flex items-center justify-around w-full text-slate-800 py-4">
+          <span>مجموع قیمت : </span>
+          <span class="text-orange-500">۶,۶۵۰,۰۰۰ تومان</span>
+        </div>
+        <div class="font-medium text-[12px] my-4 flex items-center justify-center">
+          <span class="text-slate-700">کد تخفیف دارید ؟</span>
+        </div>
+
+
+
+      </div>
+      <button class="w-full bg-orange-400 text-white rounded-md mt-16  py-2 font-medium">ادامه فرایند خرید</button>
+    </div>
+
+    <div class="shadow-md h-14 w-full block lg:hidden bg-white sticky bottom-0 left-0 right-0 z-50 rounded-t-lg">
       <ul class="h-full flex items-center justify-around">
         <li>
-          <span class="cursor-pointer"
-            ><svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-6 h-6 stroke-green-600 hover:stroke-slate-800"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
-              />
+          <span class="cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke-width="1.5" stroke="currentColor" class="w-6 h-6 stroke-green-600 hover:stroke-slate-800">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
             </svg>
           </span>
         </li>
         <li>
-          <span class="cursor-pointer"
-            ><svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-6 h-6 stroke-green-600 hover:stroke-slate-800"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
-              />
+          <span class="cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke-width="1.5" stroke="currentColor" class="w-6 h-6 stroke-green-600 hover:stroke-slate-800">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
             </svg>
           </span>
         </li>
         <li>
-          <span class="cursor-pointer"
-            ><svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-6 h-6 stroke-green-600 hover:stroke-slate-800"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
-              />
+          <span class="cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke-width="1.5" stroke="currentColor" class="w-6 h-6 stroke-green-600 hover:stroke-slate-800">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
             </svg>
           </span>
         </li>
         <li>
-          <span class="cursor-pointer"
-            ><svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-6 h-6 stroke-green-600 hover:stroke-slate-800"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z"
-              />
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
-              />
+          <span class="cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke-width="1.5" stroke="currentColor" class="w-6 h-6 stroke-green-600 hover:stroke-slate-800">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281z" />
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
             </svg>
           </span>
         </li>
       </ul>
     </div>
-    </div>
-  
-    <div class="desktop h-full hidden lg:block">
-        <nav
-        class="hidden md:block bg-white h-16 w-full flex items-center p-2 justify-between sticky top-0 z-50 shadow-lg"
-      >
-        <div class="container h-full flex items-center justify-between">
-          <div class="w-1/2 h-full flex items-center justify-start gap-x-4">
-            <div>
-              <span class="text-orange-400 text-xl font-semibold">دیجی</span>
-              <span class="text-slate-800 text-xl font-bold">تايز</span>
-            </div>
-            <ul
-              class="h-full flex items-center justify-start gap-x-10 mr-6 md:text-sm font-normal text-slate-800 cursor-pointer"
-            >
-              <li>
-                <a
-                  href=""
-                  class="block p-2 hover:bg-slate-100 hover:rounded-md transition-all duration-75"
-                  >خانه</a
-                >
-              </li>
-              <li>
-                <a
-                  href=""
-                  class="block p-2 hover:bg-slate-100 hover:rounded-md transition-all duration-75"
-                  >تلفن همراه</a
-                >
-              </li>
-              <li>
-                <a
-                  href=""
-                  class="block p-2 hover:bg-slate-100 hover:rounded-md transition-all duration-75"
-                  >لپ تاپ</a
-                >
-              </li>
-              <li>
-                <a
-                  href=""
-                  class="block p-2 hover:bg-slate-100 hover:rounded-md transition-all duration-75"
-                  >ساعت هوشمند</a
-                >
-              </li>
-            </ul>
+  </div>
+
+  <div class="desktop h-full hidden lg:block">
+    <nav class="hidden md:block bg-white h-16 w-full flex items-center p-2 justify-between sticky top-0 z-50 shadow-lg">
+      <div class="container h-full flex items-center justify-between">
+        <div class="w-1/2 h-full flex items-center justify-start gap-x-4">
+          <div>
+            <span class="text-orange-400 text-xl font-semibold">دیجی</span>
+            <span class="text-slate-800 text-xl font-bold">تايز</span>
           </div>
-          <div class="w-1/2 h-full flex items-center justify-end">
-            <div
-              class="w-2/3 h-10 bg-stone-100 rounded-md flex items-center justify-start gap-x-2 overflow-hidden"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="w-6 h-6 mx-2"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
-                />
-              </svg>
-              <input
-                type="text"
-                class="w-full h-full bg-stone-100 text-sm font-light outline-none"
-                placeholder="جستجوی نام محصول ، نام برند و ..."
-              />
-            </div>
+          <ul
+            class="h-full flex items-center justify-start gap-x-10 mr-6 md:text-sm font-normal text-slate-800 cursor-pointer">
+            <li>
+              <a href="" class="block p-2 hover:bg-slate-100 hover:rounded-md transition-all duration-75">خانه</a>
+            </li>
+            <li>
+              <a href="" class="block p-2 hover:bg-slate-100 hover:rounded-md transition-all duration-75">تلفن همراه</a>
+            </li>
+            <li>
+              <a href="" class="block p-2 hover:bg-slate-100 hover:rounded-md transition-all duration-75">لپ تاپ</a>
+            </li>
+            <li>
+              <a href="" class="block p-2 hover:bg-slate-100 hover:rounded-md transition-all duration-75">ساعت
+                هوشمند</a>
+            </li>
+          </ul>
+        </div>
+        <div class="w-1/2 h-full flex items-center justify-end">
+          <div class="w-2/3 h-10 bg-stone-100 rounded-md flex items-center justify-start gap-x-2 overflow-hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+              stroke="currentColor" class="w-6 h-6 mx-2">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+            </svg>
+            <input type="text" class="w-full h-full bg-stone-100 text-sm font-light outline-none"
+              placeholder="جستجوی نام محصول ، نام برند و ..." />
           </div>
         </div>
-      </nav>
+      </div>
+    </nav>
 
-      <div class="container w-full mt-16">
-       <div class=" w-2/3  flex items-center justify-between px-8">
-        <span class="text-slate-800 font-bold text-bold" >سبد خرید</span>
+    <div class="container w-full mt-16">
+      <div class=" w-2/3  flex items-center justify-between px-8">
+        <span class="text-slate-800 font-bold text-bold">سبد خرید</span>
         <span class="text-orange-400 font-bold text-bold">بازگشت به خانه</span>
-       </div>
-       <div class="mt-8 w-full flex items-start gap-8">
+      </div>
+      <div class="mt-8 w-full flex items-start gap-8">
         <div class="w-2/3 rounded-md">
-            <section class="cart space-y-1">
-         
-                <div class="bg-white w-full h-32 p-4 flex items-center rounded-md gap-x-8 border border-b-1 border-gray-400">
-                  <div class="w-16 h-24">
-                      <img src="/assets/images/Cart/1.png" alt="" class="w-full h-full">
-                  </div>
-                  <div class="h-full flex flex-col flex-1 items-start justify-around font-bold">
-                      <span class="text-slate-800">ساعت هوشمند اپل سری ۶</span>
-                      <span class="text-orange-500">۶,۶۵۰,۰۰۰ تومان</span>
-                  </div>
-      
-      
-                  <div class="h-full flex flex-col items-end justify-between">
-                      <span>
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 stroke-orange-500 cursor-pointer">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                        </span>
-                        <div class="flex items-center justify-center gap-x-2">
-                          
-                            <span class="w-4 h-4 rounded-full bg-gray-300 flex items-center justify-center">
-                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 stroke-gray-700 cursor-pointer">
-                                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
-                                </svg>
-                                
-                            </span>
-                            <span class="border p-1 border-orange-300 font-medium">2</span>
-                            <span class="w-4 h-4 rounded-full bg-orange-300 flex items-center justify-center cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 stroke-orange-700">
-                              <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
-                            </svg>
-                            </span>
-                        </div>
-      
-                  </div>
+          <section class="cart space-y-1">
+
+            <div
+              class="bg-white w-full h-32 p-4 flex items-center rounded-md gap-x-8 border border-b-1 border-gray-400">
+              <div class="w-16 h-24">
+                <img src="/assets/images/Cart/1.png" alt="" class="w-full h-full">
+              </div>
+              <div class="h-full flex flex-col flex-1 items-start justify-around font-bold">
+                <span class="text-slate-800">ساعت هوشمند اپل سری ۶</span>
+                <span class="text-orange-500">۶,۶۵۰,۰۰۰ تومان</span>
+              </div>
+
+
+              <div class="h-full flex flex-col items-end justify-between">
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-4 h-4 stroke-orange-500 cursor-pointer">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </span>
+                <div class="flex items-center justify-center gap-x-2">
+
+                  <span class="w-4 h-4 rounded-full bg-gray-300 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="w-4 h-4 stroke-gray-700 cursor-pointer">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+                    </svg>
+
+                  </span>
+                  <span class="border p-1 border-orange-300 font-medium">2</span>
+                  <span class="w-4 h-4 rounded-full bg-orange-300 flex items-center justify-center cursor-pointer"><svg
+                      xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="w-4 h-4 stroke-orange-700">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+                    </svg>
+                  </span>
                 </div>
-                <div class="bg-white w-full h-32 p-4 flex items-center rounded-md gap-x-8 border border-b-1 border-gray-400">
-                  <div class="w-16 h-24">
-                      <img src="/assets/images/Cart/1.png" alt="" class="w-full h-full">
-                  </div>
-                  <div class="h-full flex flex-col flex-1 items-start justify-around font-bold">
-                      <span class="text-slate-800">ساعت هوشمند اپل سری ۶</span>
-                      <span class="text-orange-500">۶,۶۵۰,۰۰۰ تومان</span>
-                  </div>
-      
-      
-                  <div class="h-full flex flex-col items-end justify-between">
-                      <span>
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 stroke-orange-500 cursor-pointer">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                        </span>
-                        <div class="flex items-center justify-center gap-x-2">
-                          
-                            <span class="w-4 h-4 rounded-full bg-gray-300 flex items-center justify-center">
-                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 stroke-gray-700 cursor-pointer">
-                                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
-                                </svg>
-                                
-                            </span>
-                            <span class="border p-1 border-orange-300 font-medium">2</span>
-                            <span class="w-4 h-4 rounded-full bg-orange-300 flex items-center justify-center cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 stroke-orange-700">
-                              <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
-                            </svg>
-                            </span>
-                        </div>
-      
-                  </div>
+
+              </div>
+            </div>
+            <div
+              class="bg-white w-full h-32 p-4 flex items-center rounded-md gap-x-8 border border-b-1 border-gray-400">
+              <div class="w-16 h-24">
+                <img src="/assets/images/Cart/1.png" alt="" class="w-full h-full">
+              </div>
+              <div class="h-full flex flex-col flex-1 items-start justify-around font-bold">
+                <span class="text-slate-800">ساعت هوشمند اپل سری ۶</span>
+                <span class="text-orange-500">۶,۶۵۰,۰۰۰ تومان</span>
+              </div>
+
+
+              <div class="h-full flex flex-col items-end justify-between">
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-4 h-4 stroke-orange-500 cursor-pointer">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </span>
+                <div class="flex items-center justify-center gap-x-2">
+
+                  <span class="w-4 h-4 rounded-full bg-gray-300 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="w-4 h-4 stroke-gray-700 cursor-pointer">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+                    </svg>
+
+                  </span>
+                  <span class="border p-1 border-orange-300 font-medium">2</span>
+                  <span class="w-4 h-4 rounded-full bg-orange-300 flex items-center justify-center cursor-pointer"><svg
+                      xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="w-4 h-4 stroke-orange-700">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+                    </svg>
+                  </span>
                 </div>
-                <div class="bg-white w-full h-32 p-4 flex items-center rounded-md gap-x-8 border border-b-1 border-gray-400 ">
-                  <div class="w-16 h-24">
-                      <img src="/assets/images/Cart/1.png" alt="" class="w-full h-full">
-                  </div>
-                  <div class="h-full flex flex-col flex-1 items-start justify-around font-bold">
-                      <span class="text-slate-800">ساعت هوشمند اپل سری ۶</span>
-                      <span class="text-orange-500">۶,۶۵۰,۰۰۰ تومان</span>
-                  </div>
-      
-      
-                  <div class="h-full flex flex-col items-end justify-between">
-                      <span>
-                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 stroke-orange-500 cursor-pointer">
-                          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                        </span>
-                        <div class="flex items-center justify-center gap-x-2">
-                          
-                            <span class="w-4 h-4 rounded-full bg-gray-300 flex items-center justify-center">
-                              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 stroke-gray-700 cursor-pointer">
-                                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
-                                </svg>
-                                
-                            </span>
-                            <span class="border p-1 border-orange-300 font-medium">2</span>
-                            <span class="w-4 h-4 rounded-full bg-orange-300 flex items-center justify-center cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 stroke-orange-700">
-                              <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
-                            </svg>
-                            </span>
-                        </div>
-      
-                  </div>
+
+              </div>
+            </div>
+            <div
+              class="bg-white w-full h-32 p-4 flex items-center rounded-md gap-x-8 border border-b-1 border-gray-400 ">
+              <div class="w-16 h-24">
+                <img src="/assets/images/Cart/1.png" alt="" class="w-full h-full">
+              </div>
+              <div class="h-full flex flex-col flex-1 items-start justify-around font-bold">
+                <span class="text-slate-800">ساعت هوشمند اپل سری ۶</span>
+                <span class="text-orange-500">۶,۶۵۰,۰۰۰ تومان</span>
+              </div>
+
+
+              <div class="h-full flex flex-col items-end justify-between">
+                <span>
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-4 h-4 stroke-orange-500 cursor-pointer">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </span>
+                <div class="flex items-center justify-center gap-x-2">
+
+                  <span class="w-4 h-4 rounded-full bg-gray-300 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="w-4 h-4 stroke-gray-700 cursor-pointer">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m6-6H6" />
+                    </svg>
+
+                  </span>
+                  <span class="border p-1 border-orange-300 font-medium">2</span>
+                  <span class="w-4 h-4 rounded-full bg-orange-300 flex items-center justify-center cursor-pointer"><svg
+                      xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                      stroke="currentColor" class="w-4 h-4 stroke-orange-700">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M18 12H6" />
+                    </svg>
+                  </span>
                 </div>
-               
-      
-              </section>
-      
+
+              </div>
+            </div>
+
+
+          </section>
+
         </div>
         <div class="w-1/3">
-            <div class=" bg-white rounded-md py-8 px-4">
-                <div class="w-full ">
-                    <div class="w-full flex items-center justify-between ">
-                        <span class="text-slate-800 font-bold">مجموع قیمت :</span>
-                        <span class="text-orange-600">۶,۶۵۰,۰۰۰ تومان</span>
-                    </div>
-                    <div class="w-full flex items-center justify-between mt-8">
-                        <span class="text-slate-800 font-bold">کد تخفیف :</span>
-                        <span class="h-8 flex items-center relative ">
-                            <input type="text" name="" id="" class="ring-1 ring-gray-400  rounded-sm h-8 px-2 outline-none overflow-hidden text-gray-600" placeholder="123ABc">
-                            <span class="absolute left-0 top-0 bottom-0 bg-orange-500 border border-orange-400 text-right font-light inline-block h-8 px-5  text-slate-50">تایید</span>
-                        </span>
-                    </div>
-                    <div class="w-full flex items-center justify-between mt-8">
-                        <span class="text-slate-800 font-bold">تخفیف :</span>
-                        <span>۶,۶۵۰,۰۰۰ تومان</span>
-                    </div>
-                    <div class="w-full flex items-center justify-between my-16">
-                        <span class="text-slate-800 font-bold">قیمت نهایی :</span>
-                        <span class="text-orange-600">۶,۶۵۰,۰۰۰ تومان</span>
-                    </div>
-                </div>
-    
+          <div class=" bg-white rounded-md py-8 px-4">
+            <div class="w-full ">
+              <div class="w-full flex items-center justify-between ">
+                <span class="text-slate-800 font-bold">مجموع قیمت :</span>
+                <span class="text-orange-600">۶,۶۵۰,۰۰۰ تومان</span>
+              </div>
+              <div class="w-full flex items-center justify-between mt-8">
+                <span class="text-slate-800 font-bold">کد تخفیف :</span>
+                <span class="h-8 flex items-center relative ">
+                  <input type="text" name="" id=""
+                    class="ring-1 ring-gray-400  rounded-sm h-8 px-2 outline-none overflow-hidden text-gray-600"
+                    placeholder="123ABc">
+                  <span
+                    class="absolute left-0 top-0 bottom-0 bg-orange-500 border border-orange-400 text-right font-light inline-block h-8 px-5  text-slate-50">تایید</span>
+                </span>
+              </div>
+              <div class="w-full flex items-center justify-between mt-8">
+                <span class="text-slate-800 font-bold">تخفیف :</span>
+                <span>۶,۶۵۰,۰۰۰ تومان</span>
+              </div>
+              <div class="w-full flex items-center justify-between my-16">
+                <span class="text-slate-800 font-bold">قیمت نهایی :</span>
+                <span class="text-orange-600">۶,۶۵۰,۰۰۰ تومان</span>
+              </div>
             </div>
 
-            <button class="w-full py-4 mt-4 bg-orange-400 font-medium text-slate-50 rounded-md cursor-pointer">ادامه فرایند خرید</button>
-            <button class="w-full py-4 mt-4 text-orange-400 bg-slate-50 font-medium rounded-md border border-orange-400 cursor-pointer">انصراف از خرید</button>
+          </div>
+
+          <button class="w-full py-4 mt-4 bg-orange-400 font-medium text-slate-50 rounded-md cursor-pointer">ادامه
+            فرایند خرید</button>
+          <button
+            class="w-full py-4 mt-4 text-orange-400 bg-slate-50 font-medium rounded-md border border-orange-400 cursor-pointer">انصراف
+            از خرید</button>
         </div>
-       </div>
       </div>
-      <footer class="bottom-0 right-0 left-0 bg-white w-full pb-4 mt-6 hidden lg:block">
-        <div class="grid grid-cols-12 p-4">
-          <div class="col-span-6 p-8">
-            <span class="font-extrabold text-orange-500 text-2xl">دیجی</span>
-            <span class="font-extrabold text-slate-800 text-2xl">تایز</span>
-            <span class="h-1 w-10 bg-orange-500 inline-block mr-6"></span>
-            <p class="text-slate-600 mt-12 leading-6 font-light text-[12px]">
-              پرچمداران اپل هر ساله یکی از جذاب‌ترین گوشی‌های موجود در بازار
-              هستند و سر و صدای زیادی هم بعد از معرفی به پا می‌کنند. امسال نیز
-              نسل جدید از پرچمداران اپل یعنی ایفون 13 مینی، ایفون 13، ایفون 13
-              پرو و ایفون 13 پرو مکس معرفی شدند. در این مطلب قصد داریم به سراغ
-              پرچمدار میانی اپل یعنی ایفون 13 برویم .
-            </p>
-          </div>
-          <div class="col-span-3">
-            <ul class="p-6 text-slate-600 h-full space-y-4 font-medium">
-              <li class="text-slate-800 font-bold text-xl">محصولات</li>
-              <li>تلفن همراه</li>
-              <li>ساعت هوشمند</li>
-              <li>لپ تاپ</li>
-            </ul>
-          </div>
-          <div
-            class="col-span-3 flex flex-col items-center justify-center text-slate-700 space-y-4"
-          >
-            <img
-              src="/assets/images/Single Product/image 14.png"
-              alt=""
-              srcset=""
-              width="196px"
-            />
-            <span>۰۲۱-۱۲۳۴۵۶</span>
-            <span>info@digitize.com</span>
-          </div>
-        </div>
-      </footer>
-    
-
-
-
-      
     </div>
- 
-  </body>
+    <footer class="bottom-0 right-0 left-0 bg-white w-full pb-4 mt-6 hidden lg:block">
+      <div class="grid grid-cols-12 p-4">
+        <div class="col-span-6 p-8">
+          <span class="font-extrabold text-orange-500 text-2xl">دیجی</span>
+          <span class="font-extrabold text-slate-800 text-2xl">تایز</span>
+          <span class="h-1 w-10 bg-orange-500 inline-block mr-6"></span>
+          <p class="text-slate-600 mt-12 leading-6 font-light text-[12px]">
+            پرچمداران اپل هر ساله یکی از جذاب‌ترین گوشی‌های موجود در بازار
+            هستند و سر و صدای زیادی هم بعد از معرفی به پا می‌کنند. امسال نیز
+            نسل جدید از پرچمداران اپل یعنی ایفون 13 مینی، ایفون 13، ایفون 13
+            پرو و ایفون 13 پرو مکس معرفی شدند. در این مطلب قصد داریم به سراغ
+            پرچمدار میانی اپل یعنی ایفون 13 برویم .
+          </p>
+        </div>
+        <div class="col-span-3">
+          <ul class="p-6 text-slate-600 h-full space-y-4 font-medium">
+            <li class="text-slate-800 font-bold text-xl">محصولات</li>
+            <li>تلفن همراه</li>
+            <li>ساعت هوشمند</li>
+            <li>لپ تاپ</li>
+          </ul>
+        </div>
+        <div class="col-span-3 flex flex-col items-center justify-center text-slate-700 space-y-4">
+          <img src="/assets/images/Single Product/image 14.png" alt="" srcset="" width="196px" />
+          <span>۰۲۱-۱۲۳۴۵۶</span>
+          <span>info@digitize.com</span>
+        </div>
+      </div>
+    </footer>
+
+
+
+
+
+  </div>
+
+</body>
+
 </html>
