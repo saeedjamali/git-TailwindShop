@@ -187,12 +187,12 @@ function disClosureSideBar() {
   const titles = document.querySelectorAll(".title__filter");
   const content = document.querySelectorAll(".content__filter");
   const iconTitle = document.querySelectorAll(".title__icon");
-  // console.log(titles);
-
+ 
   titles.forEach((title) => {
     title.addEventListener("click", (e) => {
-       console.log(title.childNodes[3]);
-      title.childNodes[3].childNodes[1].chil.classList.toggle("rotate-180");
+      console.log(titles);
+      //  console.log(title.childNodes[3]);
+      // title.childNodes[3].childNodes[1].chil.classList.toggle("rotate-180");
       let id = title.dataset.id;
       // iconTitle.classList.toggle("rotate-90");
       content.forEach((c) => {
